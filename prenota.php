@@ -7,6 +7,7 @@ $telefono = $_POST['telefono'];
 $servizio = $_POST['servizio'];
 $data = $_POST['data_prenotazione'];
 $orario = $_POST['orario'];
+$operatore_id = !empty($_POST['operatore_id']) ? intval($_POST['operatore_id']) : null;
 
 // Check if the selected date is Monday or Sunday
 $day = date('N', strtotime($data)); // 1 = Monday, 7 = Sunday
@@ -193,7 +194,7 @@ if ($specific_limit_result->num_rows > 0) {
     $general_limit_query = $conn->prepare("SELECT limite_persone FROM limiti_orari WHERE giorno_settimana = ? AND orario = ? AND attivo = 1");
     $general_limit_query->bind_param("ss", $selectedDay, $orario);
     $general_limit_query->execute();
-    $general_limit_result = $general_limit_query->get_result();
+    $general_limit_result =  $general_limit_query->get_result();
     
     if ($general_limit_result->num_rows > 0) {
         $general_limit_row = $general_limit_result->fetch_assoc();
@@ -291,11 +292,23 @@ if ($current_bookings >= $limit) {
     ");
 }
 
-$stmt = $conn->prepare("INSERT INTO prenotazioni (nome, email, telefono, servizio, data_prenotazione, orario) VALUES (?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssss", $nome, $email, $telefono, $servizio, $data, $orario);
+$stmt = $conn->prepare("INSERT INTO prenotazioni (nome, email, telefono, servizio, data_prenotazione, orario, operatore_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssssssi", $nome, $email, $telefono, $servizio, $data, $orario, $operatore_id);
 
 if ($stmt->execute()) {
     $success = true;
+    $operator_name = '';
+    if ($operatore_id) {
+        $operator_query = $conn->prepare("SELECT nome, cognome FROM operatori WHERE id = ?");
+        $operator_query->bind_param("i", $operatore_id);
+        $operator_query->execute();
+        $operator_result = $operator_query->get_result();
+        if ($operator_result->num_rows > 0) {
+            $operator_row = $operator_result->fetch_assoc();
+            $operator_name = $operator_row['nome'] . ' ' . $operator_row['cognome'];
+        }
+        $operator_query->close();
+    }
 } else {
     $success = false;
 }
@@ -577,6 +590,12 @@ $conn->close();
                     <span class="detail-label">Servizio:</span>
                     <span class="detail-value"><?php echo htmlspecialchars($servizio); ?></span>
                 </div>
+                <?php if ($operator_name): ?>
+                <div class="detail-row">
+                    <span class="detail-label">Operatore:</span>
+                    <span class="detail-value"><?php echo htmlspecialchars($operator_name); ?></span>
+                </div>
+                <?php endif; ?>
                 <div class="detail-row">
                     <span class="detail-label">Data:</span>
                     <span class="detail-value"><?php echo date('d/m/Y', strtotime($data)); ?></span>

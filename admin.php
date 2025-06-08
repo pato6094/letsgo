@@ -6,6 +6,24 @@ if (!isset($_SESSION['logged'])) {
 }
 include 'connessione.php';
 
+// Create operators table if it doesn't exist
+$conn->query("CREATE TABLE IF NOT EXISTS operatori (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    cognome VARCHAR(255) NOT NULL,
+    telefono VARCHAR(20),
+    email VARCHAR(255),
+    specialita TEXT,
+    attivo TINYINT(1) DEFAULT 1,
+    data_inserimento TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)");
+
+// Add operatore_id column to prenotazioni table if it doesn't exist
+$result = $conn->query("SHOW COLUMNS FROM prenotazioni LIKE 'operatore_id'");
+if ($result->num_rows == 0) {
+    $conn->query("ALTER TABLE prenotazioni ADD COLUMN operatore_id INT, ADD FOREIGN KEY (operatore_id) REFERENCES operatori(id)");
+}
+
 // Handle booking actions
 if (isset($_GET['action']) && isset($_GET['id'])) {
     $id = intval($_GET['id']);
@@ -178,14 +196,14 @@ if ($stato_exists) {
     }
 }
 
-// Get recent bookings
-$prenotazioni_query = "SELECT * FROM prenotazioni ORDER BY ";
+// Get recent bookings with operator info
+$prenotazioni_query = "SELECT p.*, CONCAT(o.nome, ' ', o.cognome) as operatore_nome FROM prenotazioni p LEFT JOIN operatori o ON p.operatore_id = o.id ORDER BY ";
 // Check if we have data_prenotazione column
 $data_col_exists = $conn->query("SHOW COLUMNS FROM prenotazioni LIKE 'data_prenotazione'")->num_rows > 0;
 if ($data_col_exists) {
-    $prenotazioni_query .= "data_prenotazione DESC, ";
+    $prenotazioni_query .= "p.data_prenotazione DESC, ";
 }
-$prenotazioni_query .= "id DESC LIMIT 10";
+$prenotazioni_query .= "p.id DESC LIMIT 10";
 
 $prenotazioni = $conn->query($prenotazioni_query);
 
@@ -1044,7 +1062,7 @@ select[style*="color: #ffffff"] option {
     <ul class="sidebar-nav">
         <li><a href="#" class="active"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
         <li><a href="gestione_prenotazioni.php"><i class="fas fa-calendar-alt"></i><span>Prenotazioni</span></a></li>
-        <li><a href="#"><i class="fas fa-scissors"></i><span>Servizi</span></a></li>
+        <li><a href="gestione_operatori.php"><i class="fas fa-scissors"></i><span>Operatori</span></a></li>
         <li><a href="#"><i class="fas fa-chart-line"></i><span>Report</span></a></li>
         <li><a href="#"><i class="fas fa-cog"></i><span>Impostazioni</span></a></li>
         <li><a href="index.php"><i class="fas fa-arrow-left"></i><span>Torna al sito</span></a></li>
@@ -1113,6 +1131,7 @@ select[style*="color: #ffffff"] option {
                             <?php endif; ?>
                             <th>Ora</th>
                             <th>Servizio</th>
+                            <th>Operatore</th>
                             <?php if ($stato_exists): ?>
                             <th>Stato</th>
                             <th>Azioni</th>
@@ -1140,6 +1159,7 @@ select[style*="color: #ffffff"] option {
                                 <?php endif; ?>
                                 <td><?php echo isset($row['orario']) ? date('H:i', strtotime($row['orario'])) : 'N/A'; ?></td>
                                 <td><?php echo htmlspecialchars($row['servizio'] ?? 'N/A'); ?></td>
+                                <td><?php echo htmlspecialchars($row['operatore_nome'] ?? 'Non assegnato'); ?></td>
                                 <?php if ($stato_exists): ?>
                                 <td>
                                     <span class="status <?php 
@@ -1168,7 +1188,7 @@ select[style*="color: #ffffff"] option {
                             <?php endwhile; ?>
                         <?php else: ?>
                             <tr>
-                                <td colspan="8" style="text-align: center; color: #a0a0a0;">
+                                <td colspan="9" style="text-align: center; color: #a0a0a0;">
                                     Nessuna prenotazione trovata
                                 </td>
                             </tr>
@@ -1372,4 +1392,3 @@ window.addEventListener('resize', () => {
 </script>
 </body>
 </html>
-```

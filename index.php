@@ -21,6 +21,24 @@ $conn->query("CREATE TABLE IF NOT EXISTS limiti_date_specifiche (
     attivo TINYINT(1) DEFAULT 1,
     UNIQUE KEY unique_date_slot (data_specifica, orario)
 )");
+
+// Create operators table if it doesn't exist
+$conn->query("CREATE TABLE IF NOT EXISTS operatori (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    cognome VARCHAR(255) NOT NULL,
+    telefono VARCHAR(20),
+    email VARCHAR(255),
+    specialita TEXT,
+    attivo TINYINT(1) DEFAULT 1,
+    data_inserimento TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)");
+
+// Add operatore_id column to prenotazioni table if it doesn't exist
+$result = $conn->query("SHOW COLUMNS FROM prenotazioni LIKE 'operatore_id'");
+if ($result->num_rows == 0) {
+    $conn->query("ALTER TABLE prenotazioni ADD COLUMN operatore_id INT, ADD FOREIGN KEY (operatore_id) REFERENCES operatori(id)");
+}
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -533,6 +551,22 @@ $conn->query("CREATE TABLE IF NOT EXISTS limiti_date_specifiche (
                             $query = $conn->query("SELECT nome, prezzo FROM servizi");
                             while ($row = $query->fetch_assoc()) {
                                 echo "<option value='{$row['nome']}'>{$row['nome']} - €{$row['prezzo']}</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="operatore">Operatore (opzionale)</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user-tie"></i>
+                        <select id="operatore" name="operatore_id">
+                            <option value="">Nessuna preferenza</option>
+                            <?php
+                            $operators_query = $conn->query("SELECT id, nome, cognome FROM operatori WHERE attivo = 1 ORDER BY nome, cognome");
+                            while ($operator = $operators_query->fetch_assoc()) {
+                                echo "<option value='{$operator['id']}'>{$operator['nome']} {$operator['cognome']}</option>";
                             }
                             ?>
                         </select>
