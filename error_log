@@ -1,0 +1,139 @@
+[06-Jun-2025 21:57:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'stato' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:19
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(19): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 19
+[06-Jun-2025 21:57:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'stato' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:19
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(19): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 19
+[06-Jun-2025 21:57:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'stato' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:19
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(19): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 19
+[06-Jun-2025 21:58:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'stato' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:19
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(19): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 19
+[06-Jun-2025 22:00:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'stato' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:19
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(19): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 19
+[06-Jun-2025 22:00:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'stato' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:19
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(19): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 19
+[06-Jun-2025 22:02:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'stato' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:9
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(9): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 9
+[06-Jun-2025 22:44:24 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/verifica/public_html/barbiere-test/admin.php on line 198
+[06-Jun-2025 22:44:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/verifica/public_html/barbiere-test/admin.php:1) in /home/verifica/public_html/barbiere-test/admin.php on line 200
+[06-Jun-2025 22:59:03 UTC] PHP Warning:  Undefined array key "data_prenotazione" in /home/verifica/public_html/barbiere-test/admin.php on line 157
+[06-Jun-2025 22:59:03 UTC] PHP Warning:  Undefined array key "data_prenotazione" in /home/verifica/public_html/barbiere-test/admin.php on line 157
+[06-Jun-2025 22:59:15 UTC] PHP Warning:  Undefined array key "data_prenotazione" in /home/verifica/public_html/barbiere-test/admin.php on line 157
+[06-Jun-2025 22:59:15 UTC] PHP Warning:  Undefined array key "data_prenotazione" in /home/verifica/public_html/barbiere-test/admin.php on line 157
+[06-Jun-2025 22:59:17 UTC] PHP Warning:  Undefined array key "data_prenotazione" in /home/verifica/public_html/barbiere-test/admin.php on line 157
+[06-Jun-2025 22:59:17 UTC] PHP Warning:  Undefined array key "data_prenotazione" in /home/verifica/public_html/barbiere-test/admin.php on line 157
+[06-Jun-2025 23:52:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'prezzo' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:25
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(25): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 25
+[06-Jun-2025 23:52:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'prezzo' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:25
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(25): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 25
+[06-Jun-2025 23:52:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'prezzo' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:25
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(25): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 25
+[06-Jun-2025 23:52:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'prezzo' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:25
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(25): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 25
+[06-Jun-2025 23:52:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'prezzo' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:25
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(25): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 25
+[06-Jun-2025 23:52:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'prezzo' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:25
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(25): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 25
+[06-Jun-2025 23:53:11 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'prezzo' in 'field list' in /home/verifica/public_html/barbiere-test/admin.php:25
+Stack trace:
+#0 /home/verifica/public_html/barbiere-test/admin.php(25): mysqli->query()
+#1 {main}
+  thrown in /home/verifica/public_html/barbiere-test/admin.php on line 25
+[07-Jun-2025 09:36:32 UTC] PHP Warning:  Undefined array key "username" in /home/verifica/public_html/barbiere-test/login_check.php on line 5
+[07-Jun-2025 09:36:32 UTC] PHP Warning:  Undefined array key "password" in /home/verifica/public_html/barbiere-test/login_check.php on line 6
+[07-Jun-2025 09:36:35 UTC] PHP Warning:  Undefined array key "username" in /home/verifica/public_html/barbiere-test/login_check.php on line 5
+[07-Jun-2025 09:36:35 UTC] PHP Warning:  Undefined array key "password" in /home/verifica/public_html/barbiere-test/login_check.php on line 6
+[07-Jun-2025 11:24:08 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/verifica/public_html/barbierenew-main/admin.php on line 570
+[07-Jun-2025 11:24:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/verifica/public_html/barbierenew-main/admin.php:1) in /home/verifica/public_html/barbierenew-main/admin.php on line 572
+[07-Jun-2025 11:24:17 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/verifica/public_html/barbierenew-main/admin.php on line 570
+[07-Jun-2025 11:24:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/verifica/public_html/barbierenew-main/admin.php:1) in /home/verifica/public_html/barbierenew-main/admin.php on line 572
+[07-Jun-2025 11:24:51 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/verifica/public_html/barbierenew-main/admin.php on line 570
+[07-Jun-2025 11:24:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/verifica/public_html/barbierenew-main/admin.php:1) in /home/verifica/public_html/barbierenew-main/admin.php on line 572
+[07-Jun-2025 13:09:22 UTC] PHP Parse error:  Unclosed '{' on line 59 in /home/verifica/public_html/barbierenew-main/admin.php on line 1127
+[07-Jun-2025 13:32:25 UTC] PHP Parse error:  Unclosed '{' on line 59 in /home/verifica/public_html/barbierenew-main/admin.php on line 1073
+[07-Jun-2025 13:38:07 UTC] PHP Parse error:  Unclosed '{' on line 59 in /home/verifica/public_html/barbierenew-main/admin.php on line 1101
+[07-Jun-2025 13:38:57 UTC] PHP Parse error:  Unclosed '{' on line 59 in /home/verifica/public_html/barbierenew-main/admin.php on line 1092
+[07-Jun-2025 14:39:13 UTC] PHP Warning:  Undefined variable $statistiche in /home/verifica/public_html/barbierenew-main/admin.php on line 1051
+[07-Jun-2025 14:39:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/verifica/public_html/barbierenew-main/admin.php on line 1051
+[07-Jun-2025 14:39:13 UTC] PHP Warning:  Undefined variable $statistiche in /home/verifica/public_html/barbierenew-main/admin.php on line 1056
+[07-Jun-2025 14:39:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/verifica/public_html/barbierenew-main/admin.php on line 1056
+[07-Jun-2025 14:39:13 UTC] PHP Warning:  Undefined variable $statistiche in /home/verifica/public_html/barbierenew-main/admin.php on line 1061
+[07-Jun-2025 14:39:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/verifica/public_html/barbierenew-main/admin.php on line 1061
+[07-Jun-2025 14:39:13 UTC] PHP Warning:  Undefined variable $totale_ricavi in /home/verifica/public_html/barbierenew-main/admin.php on line 1066
+[07-Jun-2025 14:39:13 UTC] PHP Warning:  Undefined variable $date_prenotazioni in /home/verifica/public_html/barbierenew-main/admin.php on line 1081
+[07-Jun-2025 14:39:13 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in /home/verifica/public_html/barbierenew-main/admin.php:1081
+Stack trace:
+#0 /home/verifica/public_html/barbierenew-main/admin.php(1081): array_unique()
+#1 {main}
+  thrown in /home/verifica/public_html/barbierenew-main/admin.php on line 1081
+[07-Jun-2025 14:45:25 UTC] PHP Parse error:  Unclosed '{' on line 194 in /home/verifica/public_html/barbierenew-main/admin.php on line 1374
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "nome" in /home/verifica/public_html/ewew-main/prenota.php on line 4
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "email" in /home/verifica/public_html/ewew-main/prenota.php on line 5
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "telefono" in /home/verifica/public_html/ewew-main/prenota.php on line 6
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "servizio" in /home/verifica/public_html/ewew-main/prenota.php on line 7
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "data_prenotazione" in /home/verifica/public_html/ewew-main/prenota.php on line 8
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "orario" in /home/verifica/public_html/ewew-main/prenota.php on line 9
+[07-Jun-2025 16:32:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'nome' cannot be null in /home/verifica/public_html/ewew-main/prenota.php:297
+Stack trace:
+#0 /home/verifica/public_html/ewew-main/prenota.php(297): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/verifica/public_html/ewew-main/prenota.php on line 297
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "nome" in /home/verifica/public_html/ewew-main/prenota.php on line 4
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "email" in /home/verifica/public_html/ewew-main/prenota.php on line 5
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "telefono" in /home/verifica/public_html/ewew-main/prenota.php on line 6
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "servizio" in /home/verifica/public_html/ewew-main/prenota.php on line 7
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "data_prenotazione" in /home/verifica/public_html/ewew-main/prenota.php on line 8
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "orario" in /home/verifica/public_html/ewew-main/prenota.php on line 9
+[07-Jun-2025 16:32:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'nome' cannot be null in /home/verifica/public_html/ewew-main/prenota.php:297
+Stack trace:
+#0 /home/verifica/public_html/ewew-main/prenota.php(297): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/verifica/public_html/ewew-main/prenota.php on line 297
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "nome" in /home/verifica/public_html/ewew-main/prenota.php on line 4
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "email" in /home/verifica/public_html/ewew-main/prenota.php on line 5
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "telefono" in /home/verifica/public_html/ewew-main/prenota.php on line 6
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "servizio" in /home/verifica/public_html/ewew-main/prenota.php on line 7
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "data_prenotazione" in /home/verifica/public_html/ewew-main/prenota.php on line 8
+[07-Jun-2025 16:32:20 UTC] PHP Warning:  Undefined array key "orario" in /home/verifica/public_html/ewew-main/prenota.php on line 9
+[07-Jun-2025 16:32:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'nome' cannot be null in /home/verifica/public_html/ewew-main/prenota.php:297
+Stack trace:
+#0 /home/verifica/public_html/ewew-main/prenota.php(297): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/verifica/public_html/ewew-main/prenota.php on line 297
